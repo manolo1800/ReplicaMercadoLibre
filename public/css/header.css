@@ -1,0 +1,59 @@
+
+.nav_header
+{
+    background-color: #fff159;
+    width: 100%;
+    color: #4f4f4f;
+    
+}
+
+.navs_bounds
+{
+    margin-right: 6%;
+    margin-left: 6%;
+}
+
+.nav_logo
+{
+    text-align: left;
+}
+
+.nav_search
+{
+    text-align: center;
+}
+
+.nav_menu
+{
+    text-align: center;
+}
+
+
+.nav_menu_header_menu_wrapper
+{
+    text-align:end;
+    
+}
+
+.nav_menu_list,.nav_menu_item
+{
+    text-align: center;
+    display: inline;
+}
+
+.nav_menu_item_link,.nav_menu_categories_trigger
+{
+    text-decoration: none;
+}
+
+
+.exhibitor_picture
+{
+    text-align: left;
+}
+
+.nav_menu_item
+{
+    color:  #d9d9d9;
+}
+

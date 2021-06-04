@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=KoHo:wght@200&display=swap');
+
+
+*
+{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'KoHo', sans-serif;
+}
+
+body
+{
+    background-color: #e7e7e7;
+    
+}
+
+ul,li,a
+{
+    list-style: none;
+    text-decoration: none;
+   
+}
