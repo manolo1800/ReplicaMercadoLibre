@@ -1,8 +1,8 @@
 <?php
 
-    class Product
+    class Products
     {
-        public $ProductId,$CategoryId,$Name,$Descripcion,$Stock,$Price,$DateOfRegistration,$DateOfUpdate;
+        public $ProductId,$CategoryId,$SubcategoryId,$Name,$Descripcion,$Stock,$Price,$DateOfRegistration,$DateOfUpdate;
 
         public function __construct()
         {
@@ -171,6 +171,21 @@
                 return $this;
         }
 
+        public function getCategories()
+        {
+                $sql="SELECT *
+                FROM Categories ";
+                $query=$this->db->query($sql);
+                return $query;
+        }
+
+        public function getSubcategories($CategoryId)
+        {
+                $sql="SELECT * FROM Subcategories WHERE CategoryId='$CategoryId'";
+                $query=$this->db->query($sql);
+                return $query;
+        }
+        
         public function save()
         {
                 

@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SuperiorQuality</title>
     <link rel="stylesheet" href="<?=home_url?>/css/superiorQuality.css">
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous">
+    </script>
+
 </head>
 <body>
     
@@ -37,11 +43,11 @@
                 
                 <div class="nav_menu">
                     <ul class="nav_menu_list">
-                        <li class="nav_menu_item"><a href="" class="nav_menu_categories_trigger">categorias</a></li>
+                        <li class="nav_menu_item"><a href="<?=home_url?>Category/index" class="nav_menu_categories_trigger">categorias</a></li>
                         <li class="nav_menu_item"><a href="" class="nav_menu_item_link" >historial</a></li>
                         <li class="nav_menu_item"><a href="" class="nav_menu_item_link" >tiendas oficiales</a></li>
                         <li class="nav_menu_item"><a href="" class="nav_menu_item_link">ofertas de la semana</a></li>
-                        <li class="nav_menu_item"><a href="" class="nav_menu_item_link">vender</a></li>
+                        <li class="nav_menu_item"><a href="<?=home_url?>Product/create" class="nav_menu_item_link">vender</a></li>
                         <li class="nav_menu_item"><a href="" class="nav_menu_item_link">ayuda</a></li>
                     </ul>
                 </div>

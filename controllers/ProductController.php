@@ -1,6 +1,6 @@
 <?php 
 
-    require_once '../models/Product.php';
+    require_once '../models/Products.php';
 
     class ProductController
     {
@@ -16,10 +16,20 @@
 
         }
 
+        public function datos()
+        {
+            $Subcategory=new Products();
+            
+            $cadena=" <label>Subcategories</label>
+                      <select id='SubcategoryId' name='SubcategoryId'>";
+        }
         
         public function create()
         {
-            require_once '../views/Product/create.php';
+            $proCate= new Products();
+            $proCate=$proCate->getCategories();
+
+            require_once '../views/products/create.php';
         }
         public function save()
         {
