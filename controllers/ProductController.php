@@ -1,6 +1,7 @@
 <?php 
 
-    require_once '../models/Product.php';
+    require_once '../models/Products.php';
+
 
     class ProductController
     {
@@ -16,10 +17,33 @@
 
         }
 
+        public function datos()
+        {
+            $proCate= new Products();
+            $proCate=$proCate->getCategories();
+
+            require_once '../views/products/newP.php';
+
+        }
         
         public function create()
         {
-            require_once '../views/Product/create.php';
+            if(isset($_POST))
+            {
+                $CategoryId=$_POST['CategoryId'] ? $_POST['CategoryId']:false;
+                var_dump($_POST);
+                die();
+                $subcategoryId= new Products();
+                $subcategoryId=$subcategoryId->getSubcategoriesId($CategoryId);
+
+                require_once '../views/products/create.php';
+            }
+            else
+            {
+
+            }
+
+            
         }
         public function save()
         {

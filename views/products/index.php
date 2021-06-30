@@ -8,7 +8,7 @@
 
 <?php Utils::deleteSession('register'); ?>
 
-<section class="exhibitor"  >
+<section class="exhibitor">
     <img src="<?=home_url?>uploads/img/exhibitor2.png" alt="" class="img_Exhibitor">
 </section>
 
