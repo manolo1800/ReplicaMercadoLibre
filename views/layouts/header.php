@@ -48,7 +48,11 @@
                         <li class="nav_menu_item"><a href="" class="nav_menu_item_link" >historial</a></li>
                         <li class="nav_menu_item"><a href="" class="nav_menu_item_link" >tiendas oficiales</a></li>
                         <li class="nav_menu_item"><a href="" class="nav_menu_item_link">ofertas de la semana</a></li>
+<<<<<<< HEAD
                         <li class="nav_menu_item"><a href="<?=home_url?>Product/datos" class="nav_menu_item_link">vender</a></li>
+=======
+                        <li class="nav_menu_item"><a href="<?=home_url?>Product/create" class="nav_menu_item_link">vender</a></li>
+>>>>>>> 82d762fa503cb7d573305076886897acfd9a977f
                         <li class="nav_menu_item"><a href="" class="nav_menu_item_link">ayuda</a></li>
                     </ul>
                 </div>
