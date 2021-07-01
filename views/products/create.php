@@ -1,6 +1,6 @@
 <form action="" method="post">
 <div class="user_create"> 
-<<<<<<< HEAD
+
     
     <label for="SubcategoryId">Subcategory</label><br>
     <select name="SubcategoryId" id="SubcategoryId" class="input">
@@ -10,7 +10,7 @@
         <?php endwhile; ?>
     </select><br><br>
 
-=======
+
     <label for="CategoryId">Categories</label><br>
     <select name="CategoryId" id="CategoryId" class="input">
         <option>selecciona una categoria</option>
@@ -52,7 +52,7 @@
         <option value=""></option>
     </select><br><br>-->
 
->>>>>>> 82d762fa503cb7d573305076886897acfd9a977f
+
     <label for="Name">Name</label><br>
     <input type="text" name="Name" class="input"><br><br>
 

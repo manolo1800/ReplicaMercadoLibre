@@ -1,10 +1,6 @@
 <?php 
 
     require_once '../models/Products.php';
-<<<<<<< HEAD
-
-=======
->>>>>>> 82d762fa503cb7d573305076886897acfd9a977f
 
     class ProductController
     {
@@ -22,23 +18,15 @@
 
         public function datos()
         {
-<<<<<<< HEAD
-            $proCate= new Products();
-            $proCate=$proCate->getCategories();
-
-            require_once '../views/products/newP.php';
-
-=======
             $Subcategory=new Products();
             
             $cadena=" <label>Subcategories</label>
                       <select id='SubcategoryId' name='SubcategoryId'>";
->>>>>>> 82d762fa503cb7d573305076886897acfd9a977f
         }
         
         public function create()
         {
-<<<<<<< HEAD
+
             if(isset($_POST))
             {
                 $CategoryId=$_POST['CategoryId'] ? $_POST['CategoryId']:false;
@@ -54,13 +42,6 @@
 
             }
 
-            
-=======
-            $proCate= new Products();
-            $proCate=$proCate->getCategories();
-
-            require_once '../views/products/create.php';
->>>>>>> 82d762fa503cb7d573305076886897acfd9a977f
         }
         public function save()
         {
