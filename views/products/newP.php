@@ -1,4 +1,4 @@
-<form action="<?=home_url?>Product/create" method="post">
+<form action="<?=home_url?>Product/create" method="POST">
 <div class="user_create"> 
 
 <label for="CategoryId">Categories</label><br>

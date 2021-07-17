@@ -1,56 +1,14 @@
-<form action="" method="post">
+<form action="<?=home_url?>Product/save" method="post" enctype="multipart/form-data">
 <div class="user_create"> 
 
     
     <label for="SubcategoryId">Subcategory</label><br>
     <select name="SubcategoryId" id="SubcategoryId" class="input">
-        <option>selecciona una categoria</option>
+        <option>selecciona una subcategoria</option>
         <?php while($sub=$subcategoryId->fetch_object()):?>
-         <option value="<?=$sub->SubcategoryId?>"><?=$sub->SubcategoryName?></option>
+         <option value="<?=$sub->SubCategoryId?>"><?=$sub->SubcategoryName?></option>
         <?php endwhile; ?>
     </select><br><br>
-
-
-    <label for="CategoryId">Categories</label><br>
-    <select name="CategoryId" id="CategoryId" class="input">
-        <option>selecciona una categoria</option>
-        <?php while($pro=$proCate->fetch_object()):?>
-         <option value="<?=$pro->CategoryId?>"><?=$pro->CategoryName?></option>
-        <?php endwhile; ?>
-    </select><br><br>
-
-    <div id="Subcategories"></div>
-    <script type="text/javascript">
-        $(document).ready(function()
-        {
-            recargarLista();
-
-            $('#CategoryId').change(function()
-            {
-                recargarLista();
-            });
-        })
-    </script>        
-    <script type="text/javascript">
-        function recargarLista()
-        {
-            $.ajax
-            ({
-                type:"POST",
-                url:"<?=home_url?>Product/datos",
-                data:"CategoryId=" + $('#lista').val(),
-                success:function(r)
-                {
-                    $('#SubcategoryId').html(r);
-                }
-            });
-        }
-    </script>
-
-    <!--<label for="SubCategoryId">Subcategories</label><br>
-    <select name="SubCategoryId" id="" class="input">
-        <option value=""></option>
-    </select><br><br>-->
 
 
     <label for="Name">Name</label><br>
@@ -64,5 +22,11 @@
 
     <label for="Price">Price</label><br>
     <input type="text" name="Price" class="input"><br><br>
+    
+    <label for="ImagePath">ImagePath</label><br>
+    <input type="file" name="ImagePath[]"  multiple>
+
+    
 </div>
+    <input type="submit" value="continue"> 
 </form>

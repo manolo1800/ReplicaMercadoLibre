@@ -2,7 +2,7 @@
 
     class Products
     {
-        public $ProductId,$CategoryId,$SubcategoryId,$Name,$Descripcion,$Stock,$Price,$DateOfRegistration,$DateOfUpdate;
+        public $ProductId,$CategoryId,$SubcategoryId,$Name,$Description,$Stock,$Price,$DateOfRegistration,$DateOfUpdate;
 
         public function __construct()
         {
@@ -52,6 +52,26 @@
         }
 
         /**
+         * Get the value of SubcategoryId
+         */ 
+        public function getSubcategoryId()
+        {
+                return $this->SubcategoryId;
+        }
+
+        /**
+         * Set the value of SubcategoryId
+         *
+         * @return  self
+         */ 
+        public function setSubcategoryId($SubcategoryId)
+        {
+                $this->SubcategoryId = $SubcategoryId;
+
+                return $this;
+        }
+
+        /**
          * Get the value of Name
          */ 
         public function getName()
@@ -74,9 +94,9 @@
         /**
          * Get the value of Descripcion
          */ 
-        public function getDescripcion()
+        public function getDescription()
         {
-                return $this->Descripcion;
+                return $this->Description;
         }
 
         /**
@@ -84,9 +104,9 @@
          *
          * @return  self
          */ 
-        public function setDescripcion($Descripcion)
+        public function setDescription($Description)
         {
-                $this->Descripcion = $Descripcion;
+                $this->Description = $Description;
 
                 return $this;
         }
@@ -181,14 +201,33 @@
 
         public function getSubcategories($CategoryId)
         {
-                $sql="SELECT * FROM Subcategories WHERE CategoryId='$CategoryId'";
+                $sql="SELECT * FROM SubCategories WHERE CategoryId=$CategoryId";
                 $query=$this->db->query($sql);
                 return $query;
         }
         
         public function save()
         {
-                
+                $sql="INSERT INTO Products VALUES
+                      (NULL,{$this->getCategoryId()},{$this->getSubcategoryId()},
+                      '{$this->getName()}','{$this->getDescription()}',{$this->getStock()},
+                      {$this->getPrice()},CURDATE(),NULL)";
+                $query=$this->db->query($sql);
+
+                return $query;
+        }
+        public function getLastProduct()
+        {
+                $sql="SELECT ProductId FROM `Products` ORDER BY ProductId DESC LIMIT 1";
+                $query=$this->db->query($sql);
+                return $query;
+        }
+
+        public function saveImage($ImagePath)
+        {
+                $sql="INSERT INTO Images VALUES (NULL,{$this->getProductId()},'$ImagePath')";
+                $query=$this->db->query($sql);
+                return $query;
         }
 
         public function update()
@@ -205,5 +244,7 @@
         {
                 
         }
+        
+
         
     }

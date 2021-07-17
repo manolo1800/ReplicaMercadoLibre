@@ -6,11 +6,7 @@
     <link rel="shortcut icon" href="<?=home_url?>uploads/img/merclogo2.png">
     <title>MercadoLibre</title>
     <link rel="stylesheet" href="<?=home_url?>/css/superiorQuality.css">
-    <script
-        src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-        crossorigin="anonymous">
-    </script>
+   
 
 </head>
 <body>
@@ -48,11 +44,9 @@
                         <li class="nav_menu_item"><a href="" class="nav_menu_item_link" >historial</a></li>
                         <li class="nav_menu_item"><a href="" class="nav_menu_item_link" >tiendas oficiales</a></li>
                         <li class="nav_menu_item"><a href="" class="nav_menu_item_link">ofertas de la semana</a></li>
-<<<<<<< HEAD
+
                         <li class="nav_menu_item"><a href="<?=home_url?>Product/datos" class="nav_menu_item_link">vender</a></li>
-=======
-                        <li class="nav_menu_item"><a href="<?=home_url?>Product/create" class="nav_menu_item_link">vender</a></li>
->>>>>>> 82d762fa503cb7d573305076886897acfd9a977f
+
                         <li class="nav_menu_item"><a href="" class="nav_menu_item_link">ayuda</a></li>
                     </ul>
                 </div>
