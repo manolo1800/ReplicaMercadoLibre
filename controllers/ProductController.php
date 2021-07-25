@@ -13,11 +13,36 @@
         
         public function search()
         {
+            if(isset($_POST))
+            {
+                $Name=$_POST['Name'];
+                $search= new Products();
+                $search->setName($Name);
+                $search=$search->search();
 
+                function ImagePath($ProductId)
+                {
+                    $imgP=new Products();
+                    $imgP=$imgP->getImage($ProductId);
+
+                    $impt=array();
+                    while($row=$imgP->fetch_assoc())
+                    {
+                        $impt[]=array(
+                            'ImagePath'=>$row['ImagePath']
+                        );
+                    }
+
+                    return $impt;
+                }
+                
+                require_once '../views/products/products.php';
+            }
         }
 
         public function datos()
         {
+            Utils::checkLogin();
             $proCate= new Products();
             $proCate=$proCate->getCategories();
             require_once '../views/products/newP.php';
@@ -42,6 +67,7 @@
         }
         public function save()
         {
+            Utils::checkLogin();
             if(isset($_POST))
             {
                 $CategoryId=$_SESSION['CategoryId'];

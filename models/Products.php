@@ -242,9 +242,23 @@
 
         public function search()
         {
-                
+                $sql="SELECT * FROM Products 
+                      WHERE (Name LIKE '%{$this->getName()}%') OR
+                            (Description LIKE '%{$this->getName()}%')
+                      ";
+                $query=$this->db->query($sql);
+
+                return $query;
         }
         
+        public function getImage($ProductId)
+        {
+                $sql="SELECT ImagePath FROM Images WHERE ProductId=$ProductId
+                      ORDER BY ImageId ASC LIMIT 1 ";
+                
+                $query=$this->db->query($sql);
 
+                return $query;
+        }
         
     }

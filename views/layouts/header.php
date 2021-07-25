@@ -33,8 +33,9 @@
                 </div>
                 
                 
-                    <form action="GET" class="nav_search">
-                        <input type="text" class="nav_Search_input">
+                    <form action="<?=home_url?>Product/search" method="POST" class="nav_search">
+                        <input type="text" name="Name" class="nav_Search_input">
+                        <input type="submit" value="search">
                     </form>
                     
                 
