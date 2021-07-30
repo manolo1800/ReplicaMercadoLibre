@@ -163,5 +163,17 @@
 
         }
 
+        public function getProduct()
+        {
+            
+            $ProductId=$_GET['ProdId'];
+
+            $product= new Products();
+            $product->setProductId($ProductId);
+            $product=$product->getProduct();
+
+            require_once '../views/products/product.php';
+
+        }
 
     }

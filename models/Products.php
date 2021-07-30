@@ -260,5 +260,13 @@
 
                 return $query;
         }
+
+        public function getProduct()
+        {
+                $sql="SELECT * FROM Products WHERE ProductId={$this->getProductId()}";
+                $query=$this->db->query($sql);
+
+                return $query;
+        }
         
     }
